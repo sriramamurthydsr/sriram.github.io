@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 3 Demo</title>
+<style>
+      :root { background:pink }
+
+	  .r-box {	 
+	            background-color: lightblue;	 
+	            color: #fff;	 
+	            line-height: 20px;	 
+	            width: 200px;	 
+	            padding: 10px;	 
+	            -webkit-border-radius: 10px;	 
+	            -moz-border-radius: 10px; 
+	        }
+
+        #sampletable th{
+            background: silver;
+        }
+
+        #sampletable tr:nth-of-type(odd){ /*odd rows*/
+            background: lightyellow;
+        }
+
+        #sampletable tr:nth-of-type(even){ /*even rows*/
+            background: lightblue;
+        }
+
+        #sampletable tr>td:first-of-type{ /*first cell of each row*/
+            font-weight: bold;
+        }
+        
+        div[id^="nav"] { background:red; }
+            
+        div[id$="primary"] { background:green; }
+
+        div[id*="content"] { background:#cc0; }
+
+        input[type="text"]:enabled { background:blue; }
+        input[type="text"]:disabled { background:#ddd; }
+        
+        p:nth-child(2) { color:red; }
+
+        p:nth-child(4) { color:blue; }
+
+        p:nth-child(odd) { color:#f00; }
+
+        :not(p) { border:3px solid #ccc; }
+
+        ::selection { color:#f00; }
+        
+        #my_CSS3_id {
+            text-align: justify;
+            -moz-column-count: 3;
+            -moz-column-gap: 1.5em;
+            -moz-column-rule: 1px solid #c4c8cc;
+
+            -webkit-column-count: 3;
+            -webkit-column-gap: 1.5em;
+            -webkit-column-rule: 1px solid #c4c8cc;
+        }
+        
+        div#navcontainer
+        {
+            position: relative;
+            font: small-caps bold small/24px "Times New Roman", serif;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        ul #navlist
+        {
+            border-top: 1px solid #fff;
+            margin: 0;
+            width: 480px;
+        }
+
+         ul#subnavlist
+        {
+            border-bottom: 2px solid #444;
+            border-left: 1px solid #444;
+            border-right: 1px solid #888;
+            margin: 0;padding: 0;
+            position: absolute;
+            top: 30px;width: 120px;
+        }
+
+        #navlist li
+        {
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul#navlist li > a:hover
+        {
+            background: #f5f5f5;
+            border-bottom: 4px solid #eee;
+            border-top: 1px solid #fff;
+            color: #000;
+        }
+
+        /* active states */
+        a:link[id=current], a:visited[id=current]
+        {
+            background: #c30 ;
+            color: #000 ;
+        }
+
+</style>
+</head>
+  
+    <body>
+
+<h1 align="center">Understanding CSS 3.0</h1>
+
+<p class="r-box">Try doing this without images</p>
+<p style="text-shadow: 2px 2px 2px #000;">My Text</p>
+
+<p>Learning CSS 3</p>
+<p>Very intresting</p>
+<p>But boring for developers</p>
+<p>Any way enjoy</p>
+
+<table id="sampletable" border="1" width="80%">
+<tr>
+	<th>Name</th>
+	<th>Age</th>
+</tr>
+<tr>
+	<td>Murthy</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>Raju</td>
+	<td>26</td>
+</tr>
+<tr>
+	<td>Kiran</td>
+	<td>42</td>
+</tr>
+<tr>
+	<td>Kavitha</td>
+	<td>32</td>
+</tr>
+</table>
+
+	<div id="nav-primary">Starting with nav and Ending with primary</div>
+	<div id="content-primary"> starting wit content and ending with primary </div>
+	<div id="content-secondary">start with content and end with secondary</div>
+	<div id="tertiary-content"> start with tertiary and end with content</div>
+	<div id="nav-secondary"> start with nav and ending with secondary</div>
+
+<form>
+Name : <input type="text" > </br>
+</form
+<br>
+<div id="my_CSS3_id">
+    Some CSS 3 selectors are widely supported. 
+    Unfortunately, some of the most useful selectors are either not 
+    supported at all or have very limited support in current browsers. 
+    That makes many of the selectors described in this article more or 
+    less useless on today's web. Don't be afraid to experiment though. 
+    You can still use those that are supported to provide forward enhancement
+     to advanced browsers.
+</div>
+        <br>
+<div id="navcontainer">
+<ul id="navlist">
+<li id="active"><a href="#" id="current">Item one</a> 
+<ul id="subnavlist">
+<li id="subactive"><a href="#" id="subcurrent">Subitem one</a></li>
+<li><a href="#">Subitem two</a></li>
+<li><a href="#">Subitem three</a></li>
+<li><a href="#">Subitem four</a></li>
+</ul>
+</li>
+<li><a href="#">Item two</a></li>
+<li><a href="#">Item three</a></li>
+<li><a href="#">Item four</a></li>
+</ul>
+</div>
+</body>
+ </html>

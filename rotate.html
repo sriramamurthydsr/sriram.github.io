@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <title>CSS3 Perspective rendering</title>
+     <style>
+         .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 50%;
+        transition-duration: 0.4s;
+        transform: rotate(-20deg);
+            }
+    .button:hover{
+        background-color: #CCAF50; 
+        color: yellow;
+         transform: rotate(20deg);
+    }
+        .rotateContainer {
+                -webkit-perspective: 200px;
+                -ms-perspective: 200px;
+            }
+
+          .rotate {
+                -webkit-transform-style: preserve-3d;
+               /* -ms-transform-style: preserve-3d;*/
+            }
+        </style>
+        <script>
+            
+            function rotateImage(value) {             
+           document.getElementById("img1").style.webkitTransform = "rotateY(" + value + "deg)";
+            //document.getElementById("img1").style.msTransform = "rotateY(" + value + "deg)";           
+        }
+        </script>
+    </head>
+    <body style="text-align:center">
+        <form id="form1">
+            <article>
+                <header>
+                    <h3 style="background:maroon;color:yellow">
+                        Rotate with CSS  (Persepective 3D rendering)
+                    </h3>
+                </header>
+                <div class="rotateContainer">
+                    <p>This is really cool. . .</p>
+                    <br/><br/><br /><br />
+                    <img class="rotate" id="img1" src="images/vinayaka.jpg" width="200" height="200" />
+                   <br /><br/><br/><br /><br />
+                     <input type="range" min="-180" max="180" step="18" value="0"
+                           onchange="rotateImage(this.value)" />
+                    <br />
+                    <p class="button">Drag the slider  to rotate image in 3D perspective </p>
+                </div>
+            </article>
+        </form>
+    </body>
+</html>

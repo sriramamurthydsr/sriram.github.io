@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS 3 for Responsive UI </title>		
+		<style>
+            .center{text-align:center}
+
+            .mybackground{background:maroon;color:yellow}
+
+			@media screen and ( max-width: 1024px ) {
+                   img.responsive { width: 100px; }
+              }
+            @media screen and ( min-width:1025px ) and ( max-width: 1280px ) {
+                img.responsive { width: 300px; }
+            }
+            @media screen and ( min-width: 1081px ) {
+                img.responsive { width: 500px; }
+            }            
+            img.responsive { height: auto; }
+
+            /* transform in CSS 3*/
+            #mytext {
+            background:yellow;
+            font-size: large;
+            border: medium solid black;
+            -webkit-transition-delay: 10ms;
+            -webkit-transition-duration: 250ms;
+        }
+          #mytext:hover {
+                font-size: x-large;
+                border: medium solid red;
+                background: green;
+                color: white;
+                padding: 4px;
+                -webkit-transition-delay: 100ms;
+                -webkit-transition-property: background, color, padding, font-size, border;
+                -webkit-transition-duration: 500ms;
+            }      
+         </style>		
+	</head>
+	<body class="center">
+        <h1 id="mytext" class="center">Pega Systems</h1>
+		<h3 class="mybackground">Conditional based  CSS 3 with Media Query  for Responsive UI</h3>
+
+		<p class="text">
+            This creates a fluid layout, but does not yet do anything to create a responsive image.
+
+        The image will stay at a static width of 300px until you add the following CSS. Then, add a new
+        class to the CSS for the image. Assign it a max-width value of 100%. This allows the width
+        to adjust to the browser width changes. Next, add a dynamic height property  to the class - height:auto
+        </p>        
+			<div>
+				<img alt="Vinayaka  image" class="responsive" src="images/vinayaka.jpg"/>
+                <p>The media query of CSS3 gives your CSS logical conditions based on
+                 the browser's viewport properties, and can render different styles based
+                 on the browser's window properties.</p>			
+	        </div>
+	</body>
+</html>

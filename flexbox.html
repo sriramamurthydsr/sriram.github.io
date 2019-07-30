@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<!--
+    CSS3 Flexbox
+Flexible boxes, or flexbox, is a new layout mode in CSS3.
+
+Use of flexbox ensures that elements behave predictably when the page
+layout must accommodate different screen sizes and different display devices.
+
+
+CSS3 Flexbox
+---------------
+Flexbox consists of flex containers and flex items.
+
+A flex container is declared by setting the display property of an element to
+either flex (rendered as a block)    or inline-flex (rendered as inline).
+
+Inside a flex container there is one or more flex items.
+
+Flex items are positioned inside a flex container along a flex line. 
+
+By default there is only one flex line per flex container.
+
+Flex Direction
+--------------
+The flex-direction property specifies the direction of the flexible items inside the flex container.
+ The default value of flex-direction is row (left-to-right, top-to-bottom).
+
+ row-reverse - If the writing-mode (direction) is left to right, the flex items will be laid out right to left
+ column - If the writing system is horizontal, the flex items will be laid out vertically
+ column-reverse - Same as column, but reversed
+
+ The justify-content Property
+ ------------------------------
+The justify-content property horizontally aligns the flexible container's items when the items 
+    do not use all available space on the main-axis.
+
+
+    flex-start - Default value. Items are positioned at the beginning of the container
+    flex-end - Items are positioned at the end of the container
+    center - Items are positioned at the center of the container
+    space-between - Items are positioned with space between the lines
+    space-around - Items are positioned with space before, between, and after the lines
+    
+The align-items Property
+--------------------------
+The align-items property vertically aligns the flexible container's items when the 
+    items do not use all available space on the cross-axis.
+    
+stretch - Default value. Items are stretched to fit the container
+flex-start - Items are positioned at the top of the container
+flex-end - Items are positioned at the bottom of the container
+center - Items are positioned at the center of the container (vertically)
+baseline - Items are positioned at the baseline of the container
+
+The flex-wrap Property
+------------------------
+The flex-wrap property specifies whether the flex items should wrap or not,
+ if there is not enough room for them on one flex line.
+    
+nowrap - Default value. The flexible items will not wrap
+wrap - The flexible items will wrap if necessary
+wrap-reverse - The flexible items will wrap, if necessary, in reverse order
+-->
+<html >
+<head>
+    <title>CSS3 Flexbox</title>
+    <style>
+        body {
+                direction: rtl;
+                }
+
+        .flex-container {
+            display: -webkit-flex;
+            display: flex;
+            /*flex-direction:column-reverse;   */        
+            /*justify-content: center;*/
+           /* flex-direction: column-reverse;*/
+            align-items: center;            
+            flex-wrap:nowrap;
+            width: 400px;
+            height: 250px;
+            background-color: lightgreen;
+           }
+        .flex-item {
+            background-color: maroon;
+            color:yellow;
+            width: 120px;
+            height: 120px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Our Products</h3>
+    <div class="flex-container">
+        <div class="flex-item">HP Keyboard with wireless feature</div>
+        <div class="flex-item">Lenova Monitor with rotatable feature</div>
+        <div class="flex-item">HP Printer with WI-FI Feature</div>
+    </div>
+    
+</body>
+</html>
